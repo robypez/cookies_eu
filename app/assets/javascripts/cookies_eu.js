@@ -21,9 +21,9 @@ var cookiesEu = {
 
   setCookie: function() {
     Cookies.set('cookie_eu_consented', true, { path: '/', expires: 365 });
-
     var container = document.querySelector('.js-cookies-eu');
     container.parentNode.removeChild(container);
+    setTimeout(location.reload.bind(location), 500);
   }
 };
 
